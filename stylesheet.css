@@ -1,0 +1,89 @@
+body {
+    background-color: #7fa998;
+    background-size: cover;
+}
+
+.container {
+    background-color: #f1f1b0;
+    border-radius: 5px;
+    width: 90vw;
+    margin: 10vh auto;
+    text-align: center;
+}
+
+.container h1 {
+    
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.content-box {
+    width: 20%;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 15px 2.5%;
+}
+
+.content-box img {
+    height: 75px;
+    width: 75px;
+    margin: 30px auto;
+}
+
+.content-box h3, .content-box p {
+    font-family: 'Playfair Display', serif;
+}
+
+.floating {
+    position: fixed;
+    box-shadow: 0 0 5px #000;
+}
+
+.ig img {
+    width: 30px;
+    height: 30px;
+    margin: 15px 15px;
+}
+
+.album {
+    box-shadow: 10px solid #df8543;
+    position: inherit;
+    width: 50%;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #fff;
+    text-align: center;
+    bottom: 15px;
+    left: 25%;
+    z-index: 10;
+    border: 2px solid #df8543;
+}
+
+.album a {
+    display: block;
+    margin: 10px auto;
+    color: #df8543;
+    font-size: 25px;
+    font-style: normal;
+    font-family: 'Yellowtail', cursive;
+}
+
+.ig {
+    box-shadow: inherit;
+    position: inherit;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    bottom: 15px;
+    left: 15px;
+    z-index: 10;
+}
