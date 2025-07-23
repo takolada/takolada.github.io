@@ -3,79 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fawaz Amajida Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
+  <title>Fawaz Amajida</title>
   <style>
-    html {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
       scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     section {
-      scroll-margin-top: 80px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+    }
+    .hero img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+    .links {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .links a {
+      background: white;
+      color: #2c5364;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .links a:hover {
+      background: #e0e0e0;
+    }
+    .arrow {
+      font-size: 2rem;
+      margin-top: 1rem;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+    .section-btns {
+      background: #f0f0f0;
+      flex-wrap: wrap;
+      gap: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .section-btns a {
+      background: #2c5364;
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .section-btns a:hover {
+      background: #1b2e38;
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-
-  <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-    <img src="profile.jpg" alt="Fawaz Amajida" class="w-32 h-32 rounded-full mb-4 shadow-lg" />
-    <h1 class="text-4xl font-bold mb-2">Fawaz Amajida</h1>
-    <p class="mb-4">An ITB Mechanical Engineering fresh graduate who is passionate about machine learning.</p>
-    <div class="flex gap-4">
-      <a href="https://www.linkedin.com/in/fawazamajida" target="_blank" class="text-blue-600 underline">LinkedIn</a>
-      <a href="cv.pdf" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Open CV</a>
+<body>
+  <section class="hero">
+    <img src="profile.jpg" alt="Fawaz Amajida">
+    <h1>Fawaz Amajida</h1>
+    <p>An ITB mechanical engineering fresh graduate who is passionate about machine learning.</p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/fawaz-amajida/" target="_blank">LinkedIn</a>
+      <a href="cv.pdf" target="_blank">Open CV</a>
     </div>
-    <div class="mt-10 animate-bounce">
-      <a href="#index" class="text-blue-600 text-xl">↓ Scroll</a>
-    </div>
+    <div class="arrow" onclick="document.getElementById('sections').scrollIntoView()">↓</div>
   </section>
 
-  <!-- Index Section -->
-  <section id="index" class="py-10 px-6 bg-white">
-    <h2 class="text-2xl font-semibold mb-4 text-center">Explore My Work</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <a href="#icaps" class="bg-gray-200 p-2 rounded hover:bg-gray-300">iCAPS</a>
-      <a href="#safmc" class="bg-gray-200 p-2 rounded hover:bg-gray-300">SAFMC</a>
-      <a href="#krti" class="bg-gray-200 p-2 rounded hover:bg-gray-300">KRTI</a>
-      <a href="#pln" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Vibration Analysis</a>
-      <a href="#softrobot" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Soft Robot ML</a>
-      <a href="#pedelec" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Pedelec</a>
-      <a href="#kopi" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Kopi Nanggerang</a>
-      <a href="#drunk" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Drunk Driver Detector</a>
-      <a href="#fraud" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Fraud Detection</a>
-      <a href="#marker" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Angle Measurement</a>
-      <a href="#gait" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Jumping Gait</a>
-      <a href="#org" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Organizational</a>
-      <a href="#certs" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Certifications</a>
-      <a href="#courses" class="bg-gray-200 p-2 rounded hover:bg-gray-300">Online Courses</a>
-    </div>
+  <section class="section-btns" id="sections">
+    <a href="#">ICAPS</a>
+    <a href="#">SAFMC</a>
+    <a href="#">KRTI</a>
+    <a href="#">Vibration Analysis (PLN)</a>
+    <a href="#">Soft Robot ML Optimization</a>
+    <a href="#">Pedelec</a>
+    <a href="#">Kopi Nanggerang</a>
+    <a href="#">Drunk Driver Detector</a>
+    <a href="#">Fraud Detection</a>
+    <a href="#">Angle Measurement</a>
+    <a href="#">Jumping Gait Analysis</a>
+    <a href="#">Organizational Experiences</a>
+    <a href="#">Certifications</a>
+    <a href="#">Online Courses</a>
   </section>
-
-  <!-- Placeholder Sections for Content -->
-  <section id="icaps" class="py-16 px-6 bg-gray-50">
-    <h3 class="text-xl font-bold mb-2">iCAPS – International Capstone 2024</h3>
-    <p>Bronze Prize winner in collaborative soft robot design with Osaka University.</p>
-  </section>
-
-  <section id="safmc" class="py-16 px-6 bg-white">
-    <h3 class="text-xl font-bold mb-2">SAFMC 2023</h3>
-    <p>3rd Place, D3 Category – Autonomous UAV system development and testing in Singapore.</p>
-  </section>
-
-  <!-- Continue similar sections for each topic (KRTI, PLN, etc.) -->
-
-  <!-- Footer -->
-  <footer class="py-6 text-center bg-gray-100 mt-10">
-    <p>© 2025 Fawaz Amajida | <a href="https://github.com/fawazamajida" class="text-blue-600">GitHub</a></p>
-  </footer>
-
-  <script>
-    const scroll = new SmoothScroll('a[href*="#"]', {
-      speed: 600,
-      speedAsDuration: true
-    });
-  </script>
-
 </body>
 </html>
