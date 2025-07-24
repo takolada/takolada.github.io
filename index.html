@@ -1,133 +1,558 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fawaz Amajida</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html, body {
-      scroll-behavior: smooth;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    section {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-    .hero {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-    }
-    .hero img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 1.5rem;
-    }
-    .links {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .links a {
-      background: white;
-      color: #2c5364;
-      text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .links a:hover {
-      background: #e0e0e0;
-    }
-    .arrow {
-      font-size: 2rem;
-      margin-top: 1rem;
-      animation: bounce 2s infinite;
-      cursor: pointer;
-    }
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(-10px);
-      }
-      60% {
-        transform: translateY(-5px);
-      }
-    }
-    .section-btns {
-      background: #f0f0f0;
-      flex-wrap: wrap;
-      gap: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-    .section-btns a {
-      background: #2c5364;
-      color: white;
-      text-decoration: none;
-      padding: 0.75rem 1rem;
-      border-radius: 4px;
-      font-size: 1rem;
-      transition: background 0.3s;
-    }
-    .section-btns a:hover {
-      background: #1b2e38;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for scroll-snap like behavior */
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            min-height: 100vh; /* Ensure body takes full height for gradient */
+            /* Updated gradient with more distinct azure shades and larger size for noticeable movement */
+            background: linear-gradient(135deg, #007bff, #00c6ff, #007bff, #00c6ff); /* Darker, vivid azure shades */
+            background-size: 400% 400%; /* Make gradient significantly larger for more visible movement */
+            animation: movingBackground 20s ease infinite; /* Slower animation for better perception */
+        }
+
+        /* Keyframes for the moving background gradient effect */
+        @keyframes movingBackground {
+            0% {
+                background-position: 0% 0%; /* Start from top-left */
+            }
+            25% {
+                background-position: 100% 0%; /* Move to top-right */
+            }
+            50% {
+                background-position: 100% 100%; /* Move to bottom-right */
+            }
+            75% {
+                background-position: 0% 100%; /* Move to bottom-left */
+            }
+            100% {
+                background-position: 0% 0%; /* Return to top-left */
+            }
+        }
+
+        .section-container {
+            min-height: 100vh; /* Each section takes at least the full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            box-sizing: border-box;
+            position: relative; /* For potential future animations */
+        }
+
+        /* Specific styles for the hero section with Azure gradient */
+        #hero {
+            background: linear-gradient(135deg, #42a5f5 0%, #1976d2 100%); /* Azure gradient */
+            color: white;
+            text-align: center;
+        }
+
+        /* Styling for project sections */
+        .project-section {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem; /* Space between project sections */
+            padding: 2rem;
+            width: 90%; /* Adjust width for responsiveness */
+            max-width: 800px; /* Max width for larger screens */
+            text-align: center;
+        }
+
+        /* Smooth scroll for navigation buttons */
+        .scroll-button {
+            transition: all 0.3s ease;
+        }
+        .scroll-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Slideshow specific styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden; /* Hide overflow for smooth transitions */
+            border-radius: 0.75rem; /* Rounded corners for the slideshow */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .mySlides {
+            display: none; /* Hide all slides by default */
+            width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Embed responsiveness */
+        .embed-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio for YouTube, adjust for other embeds */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 0.75rem;
+            margin-top: 1.5rem; /* Space above embed */
+        }
+
+        .embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Specific styling for organizational experiences to left-align text */
+        .organizational-experience-item {
+            text-align: left; /* Align text to the left */
+            margin-bottom: 1.5rem; /* Space between entries */
+            padding-bottom: 1.5rem; /* Padding at bottom for separator */
+            border-bottom: 1px solid #e0f2f7; /* Light azure separator */
+        }
+        .organizational-experience-item:last-child {
+            border-bottom: none; /* No separator for the last item */
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .organizational-experience-item h4 {
+            font-weight: 600; /* Semi-bold for organization name */
+            margin-bottom: 0.25rem;
+            color: #263238; /* Darker gray for headings */
+        }
+        .organizational-experience-item p {
+            margin-bottom: 0.5rem;
+            color: #4a5568; /* Darker gray for list text */
+        }
+        .organizational-experience-item ul {
+            list-style-type: disc; /* Bullet points for list items */
+            margin-left: 1.5rem; /* Indent bullet points */
+            color: #4a5568; /* Darker gray for list text */
+        }
+        .organizational-experience-item ul li {
+            margin-bottom: 0.25rem;
+        }
+    </style>
 </head>
 <body>
-  <section class="hero">
-    <img src="profile.jpg" alt="Fawaz Amajida">
-    <h1>Fawaz Amajida</h1>
-    <p>An ITB mechanical engineering fresh graduate who is passionate about machine learning.</p>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/fawaz-amajida/" target="_blank">LinkedIn</a>
-      <a href="cv.pdf" target="_blank">Open CV</a>
-    </div>
-    <div class="arrow" onclick="document.getElementById('sections').scrollIntoView()">↓</div>
-  </section>
 
-  <section class="section-btns" id="sections">
-    <a href="#">ICAPS</a>
-    <a href="#">SAFMC</a>
-    <a href="#">KRTI</a>
-    <a href="#">Vibration Analysis (PLN)</a>
-    <a href="#">Soft Robot ML Optimization</a>
-    <a href="#">Pedelec</a>
-    <a href="#">Kopi Nanggerang</a>
-    <a href="#">Drunk Driver Detector</a>
-    <a href="#">Fraud Detection</a>
-    <a href="#">Angle Measurement</a>
-    <a href="#">Jumping Gait Analysis</a>
-    <a href="#">Organizational Experiences</a>
-    <a href="#">Certifications</a>
-    <a href="#">Online Courses</a>
-  </section>
+    <!-- Section 1: Hero Section -->
+    <section id="hero" class="section-container">
+        <div class="flex flex-col items-center">
+            <!-- Photo -->
+            <img src="https://placehold.co/200x200/4a5568/ffffff?text=Your+Photo" alt="Your Photo" class="w-48 h-48 rounded-full object-cover shadow-lg mb-6 border-4 border-white">
+
+            <!-- Name -->
+            <h1 class="text-5xl font-extrabold mb-3 leading-tight">Your Name</h1>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:text-blue-100 text-lg mb-4 underline">
+                LinkedIn Profile
+            </a>
+
+            <!-- Tagline -->
+            <p class="text-xl font-light max-w-2xl mb-8">
+                An ITB mechanical engineering fresh graduate who is passionate about machine learning.
+            </p>
+
+            <!-- CV Button -->
+            <button onclick="window.open('your-cv-link.pdf', '_blank')" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105">
+                Open CV
+            </button>
+        </div>
+    </section>
+
+    <!-- Section 2: Projects and Experiences Navigation -->
+    <section id="projects-nav" class="section-container bg-blue-50">
+        <h2 class="text-4xl font-bold text-blue-800 mb-10 text-center">Projects & Experiences</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl px-4">
+            <!-- Navigation Buttons - Azure Palette -->
+            <button class="scroll-button bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50" data-target="icaps">International Students Joint Capstone Design Project (i-CAPS) Competition 2024</button>
+            <button class="scroll-button bg-cyan-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-opacity-50" data-target="safmc">SAFMC</button>
+            <button class="scroll-button bg-teal-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50" data-target="krti">KRTI</button>
+            <button class="scroll-button bg-indigo-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50" data-target="vibration-analysis">Vibration Analysis (Internship at PT PLN Nusantara Power)</button>
+            <button class="scroll-button bg-purple-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" data-target="soft-robot">Design Optimization of Soft Robot Bionic Hand Manipulator using Supervised Machine Learning</button>
+            <button class="scroll-button bg-pink-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-opacity-50" data-target="pedelec">Pedelec</button>
+            <button class="scroll-button bg-blue-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-opacity-50" data-target="bulletproof-car-door">Bulletproof Car Door Simulation (Finite Element Method)</button>
+            <button class="scroll-button bg-cyan-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-cyan-900 focus:outline-none focus:ring-2 focus:ring-cyan-800 focus:ring-opacity-50" data-target="drunk-driver">Drunk Driver Detector</button>
+            <button class="scroll-button bg-teal-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-teal-800 focus:ring-opacity-50" data-target="fraud-detection">Bank Transaction Fraud Detection</button>
+            <button class="scroll-button bg-indigo-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-indigo-900 focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:ring-opacity-50" data-target="marker-angle">Marker-based Angle Measurement</button>
+            <button class="scroll-button bg-purple-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-opacity-50" data-target="kinematic-analysis">Kinematic Analysis on Jumping Gait</button>
+            <button class="scroll-button bg-gray-700 text-white py-3 px-6 rounded-lg shadow-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-opacity-50" data-target="organizational-experiences">Organizational Experiences</button>
+            <button class="scroll-button bg-blue-900 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-950 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-opacity-50" data-target="certifications">Certifications</button>
+            <button class="scroll-button bg-green-900 text-white py-3 px-6 rounded-lg shadow-md hover:bg-green-950 focus:outline-none focus:ring-2 focus:ring-green-900 focus:ring-opacity-50" data-target="online-courses">Online Courses</button>
+        </div>
+    </section>
+
+    <!-- Project/Experience Sections -->
+    <section id="icaps" class="section-container bg-white">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">International Students Joint Capstone Design Project (i-CAPS) Competition 2024</h3>
+            <p class="text-gray-700 mb-6 text-justify">
+                Delegates from various disciplines and nations are grouped to collaborate in designing a product themed Future Campus. Our team’s product is “Step with Me”, an arcade game station that facilitates students to have a healthy lifestyle through recreational exercise and dietary. Step with Me measures caloric expenditure of the user using computer vision and produces lifestyle recommendations based on user’s historical data. My role was mechanical design engineering, developing game, mechatronics, and machine learning.
+                <br><br>
+                <strong>Award: Bronze Prize</strong>
+            </p>
+
+            <!-- Image Slideshow for i-CAPS -->
+            <div class="slideshow-container mb-6" id="icaps-slideshow">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/42a5f5/ffffff?text=i-CAPS+Image+1" alt="i-CAPS Image 1">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/1976d2/ffffff?text=i-CAPS+Image+2" alt="i-CAPS Image 2">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/0d47a1/ffffff?text=i-CAPS+Image+3" alt="i-CAPS Image 3">
+
+                <a class="prev" onclick="plusSlides(-1, 'icaps-slideshow')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'icaps-slideshow')">&#10095;</a>
+            </div>
+
+            <!-- YouTube Embedding for i-CAPS -->
+            <div class="embed-container">
+                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual YouTube video ID -->
+                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-in; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="safmc" class="section-container bg-blue-50">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">3rd Place of D2 Category of Singapore Amazing Flying Machine Competition (SAFMC) 2023</h3>
+            <p class="text-gray-700 mb-6 text-justify">
+                <strong>Role: Aerodynamics and Mechanical Design Engineer</strong>
+                <br><br>
+                SAFMC is an international competition organized by DSO National Laboratories and Science Centre Singapore. Designed quadcopter Vertical Take Off and Landing (VTOL) drone that is able to deliver payload through obstacles autonomously. The drone has high indoor stability, light weight, compact design, and logistic holder mechanism, successfully competed with international rivals.
+            </p>
+
+            <!-- Image Slideshow for SAFMC -->
+            <div class="slideshow-container mb-6" id="safmc-slideshow">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/42a5f5/ffffff?text=SAFMC+Image+1" alt="SAFMC Image 1">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/1976d2/ffffff?text=SAFMC+Image+2" alt="SAFMC Image 2">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/0d47a1/ffffff?text=SAFMC+Image+3" alt="SAFMC Image 3">
+
+                <a class="prev" onclick="plusSlides(-1, 'safmc-slideshow')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'safmc-slideshow')">&#10095;</a>
+            </div>
+
+            <!-- YouTube Embedding for SAFMC -->
+            <div class="embed-container">
+                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual YouTube video ID -->
+                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_SAFMC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="krti" class="section-container bg-white">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">1st Place and Best Strategy of Vertical Take-off and Landing Category of Kontes Robot Terbang Indonesia (KRTI) 2023</h3>
+            <p class="text-gray-700 mb-6 text-justify">
+                <strong>Role: Aerodynamics and Mechanical Design Engineer</strong>
+                <br><br>
+                KRTI is a national competition organized by Pusat Prestasi Nasional (Puspresnas), Kemdikbudristek Indonesia. Designed VTOL drone that can deliver payload through obstacles and perform weather modification simulation (cloud seeding) autonomously. Besides being equipped with innovative dual payload dropping mechanisms, the drone also has better efficiency, higher speed capability, and wider flight altitude range compared to the competitors.
+            </p>
+
+            <!-- Image Slideshow for KRTI -->
+            <div class="slideshow-container mb-6" id="krti-slideshow">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/42a5f5/ffffff?text=KRTI+Image+1" alt="KRTI Image 1">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/1976d2/ffffff?text=KRTI+Image+2" alt="KRTI Image 2">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/0d47a1/ffffff?text=KRTI+Image+3" alt="KRTI Image 3">
+
+                <a class="prev" onclick="plusSlides(-1, 'krti-slideshow')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'krti-slideshow')">&#10095;</a>
+            </div>
+
+            <!-- YouTube Embedding for KRTI -->
+            <div class="embed-container">
+                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual YouTube video ID -->
+                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_KRTI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="vibration-analysis" class="section-container bg-blue-50">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Vibration Analysis (Internship at PT PLN Nusantara Power)</h3>
+            <p class="text-gray-700 mb-6 text-justify">
+                PT PLN Nusantara Power UP Indramayu is a company engaged in steam power generation. PLTU Indramayu has a production capacity of 3x330 MW distributed to the Java and Bali regions, especially West Java Province and DKI Jakarta. In carrying out its production process, PLTU Indramayu operates many systems including turbine, boiler, and balance of plant systems. These systems do not always run normally. In the turbine system, there is a machine that often experiences high vibration, namely the generator stator cooling water system pump. The author analyzed the cause of high vibration of the machine. The analysis was carried out based on vibration through the stages of field observation, literature study, data collection, data processing, problem diagnosis, and recommendation preparation. The results of this high vibration cause analysis are that high vibration is caused by looseness and misalignment due to mounting damage on the motor baseplate. Recommendations to overcome the high vibration are to replace the baseplate to prevent repeated misalignment due to mounting deformation, perform alignment, and install epoxy grout to prevent fatigue failure due to undamped vibration.
+            </p>
+
+            <!-- Image Slideshow for Vibration Analysis -->
+            <div class="slideshow-container mb-6" id="vibration-analysis-slideshow">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/42a5f5/ffffff?text=Vibration+Analysis+Image+1" alt="Vibration Analysis Image 1">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/1976d2/ffffff?text=Vibration+Analysis+Image+2" alt="Vibration Analysis Image 2">
+                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/0d47a1/ffffff?text=Vibration+Analysis+Image+3" alt="Vibration Analysis Image 3">
+
+                <a class="prev" onclick="plusSlides(-1, 'vibration-analysis-slideshow')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'vibration-analysis-slideshow')">&#10095;</a>
+            </div>
+
+            <!-- YouTube Embedding for Vibration Analysis -->
+            <div class="embed-container">
+                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual YouTube video ID -->
+                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_VIBRATION" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="soft-robot" class="section-container bg-white">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Design Optimization of Soft Robot Bionic Hand Manipulator using Supervised Machine Learning</h3>
+            <p class="text-gray-700 text-justify">Details about this research project will go here. Explain the problem, your approach, the machine learning models used, and the results.</p>
+        </div>
+    </section>
+
+    <section id="pedelec" class="section-container bg-blue-50">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Pedelec</h3>
+            <p class="text-gray-700 text-justify">Details about the Pedelec project will go here. Describe its purpose, your involvement, and any significant features.</p>
+        </div>
+    </section>
+
+    <section id="bulletproof-car-door" class="section-container bg-white">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Bulletproof Car Door Simulation (Finite Element Method)</h3>
+            <p class="text-gray-700 mb-6 text-justify">
+                This project involves the simulation of a bulletproof car door using the Finite Element Method (FEM). The goal is to analyze the structural integrity and deformation behavior of the car door when subjected to high-speed projectile impacts, ensuring optimal design for ballistic protection. The simulation provides insights into material response and energy absorption.
+            </p>
+
+            <!-- Canva Embed for Bulletproof Car Door Simulation -->
+            <div class="flex justify-center mb-6">
+                <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+                padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                border-radius: 8px; will-change: transform;">
+                    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                        src="https://www.canva.com/design/DAF3JUYuGQg/BBGXOETxA1Ygj8KmmlDyvQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                    </iframe>
+                </div>
+            </div>
+            <p class="text-gray-700 text-justify">
+                <a href="https://www.canva.com/design/DAF3JUYuGQg/BBGXOETxA1Ygj8KmmlDyvQ/view?utm_content=DAF3JUYuGQg&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">Final Presentation MEH</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="drunk-driver" class="section-container bg-blue-50">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Drunk Driver Detector (Machine Learning)</h3>
+            <p class="text-gray-700 mb-6 text-justify">
+                This project focuses on developing a Drunk Driver Detector using Machine Learning. It aims to prevent traffic accidents by identifying impaired drivers. The solution includes a Streamlit application for demonstration and utilizes computer vision techniques to analyze driver behavior. A key aspect is the use of machine learning models to detect signs of intoxication.
+            </p>
+            <p class="text-gray-700 mb-6 text-justify">
+                <a href="https://drunkorsober.streamlit.app/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">View Streamlit App</a>
+            </p>
+
+            <!-- YouTube Embedding for Drunk Driver Detector -->
+            <div class="embed-container mb-6">
+                <iframe src="https://www.youtube.com/embed/IKBmmAoW_As" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Gamma App Embedding for Drunk Driver Detector -->
+            <div class="flex justify-center mb-6">
+                <iframe src="https://gamma.app/embed/86mtgonh1jzy2mo" style="width: 700px; max-width: 100%; height: 450px" allow="fullscreen" title="Copy of CekMabuk AI: Mencegah Kecelakaan Lalu Lintas"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="fraud-detection" class="section-container bg-white">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Bank Transaction Fraud Detection</h3>
+            <p class="text-gray-700 text-justify">Details about the Bank Transaction Fraud Detection project will go here. Explain the machine learning techniques used, the dataset, and the results.</p>
+        </div>
+    </section>
+
+    <section id="marker-angle" class="section-container bg-blue-50">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Marker-based Angle Measurement</h3>
+            <p class="text-gray-700 text-justify">Details about the Marker-based Angle Measurement project will go here. Describe the methodology, tools, and applications.</p>
+        </div>
+    </section>
+
+    <section id="kinematic-analysis" class="section-container bg-white">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Kinematic Analysis on Jumping Gait</h3>
+            <p class="text-gray-700 text-justify">Details about the Kinematic Analysis project will go here. Explain the analysis methods, findings, and any software used.</p>
+        </div>
+    </section>
+
+    <section id="organizational-experiences" class="section-container bg-blue-50">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Organizational Experiences</h3>
+            <div class="text-gray-700">
+                <!-- Himpunan Mahasiswa Mesin (HMM) ITB -->
+                <div class="organizational-experience-item">
+                    <h4 class="text-xl font-semibold text-blue-700">Himpunan Mahasiswa Mesin (HMM) ITB</h4>
+                    <p class="text-sm text-gray-600">May 2023 – May 2024</p>
+                    <p class="font-medium mb-2">Head of Engineering Profession Division</p>
+                    <p class="mb-2">HMM ITB is the association of mechanical engineering students of ITB.</p>
+                    <ul class="list-disc ml-6">
+                        <li>Led 7 staff members to execute division’s programs focused on engineering skills enhancement.</li>
+                        <li>Organized Health-Safety-Environment (HSE), Computer Aided Design (CAD), and Finite Element Analysis (FEA) training sessions attended by 202 participants.</li>
+                        <li>Achieved 1.191 likes through 5 engineering contents on HMM ITB's Instagram account.</li>
+                        <li>Built and maintained a platform providing learning resource information.</li>
+                    </ul>
+                </div>
+
+                <!-- ITB Student Orchestra (ISO) -->
+                <div class="organizational-experience-item">
+                    <h4 class="text-xl font-semibold text-blue-700">ITB Student Orchestra (ISO)</h4>
+                    <p class="text-sm text-gray-600">May 2022 - Apr 2023</p>
+                    <p class="font-medium mb-2">Head of Fundraising Division</p>
+                    <p class="mb-2">ISO is a student club that focuses on orchestral music.</p>
+                    <ul class="list-disc ml-6">
+                        <li>Led 3 staff members in designing and selling club apparel and merchandise.</li>
+                        <li>Reduced production cost up to Rp782.000.</li>
+                    </ul>
+                </div>
+
+                <!-- Ganesha Academy: Pioneer (GAP) -->
+                <div class="organizational-experience-item">
+                    <h4 class="text-xl font-semibold text-blue-700">Ganesha Academy: Pioneer (GAP)</h4>
+                    <p class="text-sm text-gray-600">Nov 2021 - Mar 2022</p>
+                    <p class="font-medium mb-2">Head of Participant Human Resources Division</p>
+                    <p class="mb-2">GAP is a leadership development program for freshmen in ITB.</p>
+                    <ul class="list-disc ml-6">
+                        <li>Led 6 staff members in managing 25 participants of the program.</li>
+                        <li>Responsible for collecting attendance lists, assessing assignments, evaluating participants' performance, and writing reports.</li>
+                    </ul>
+                </div>
+
+                <!-- Kabinet Keluarga Mahasiswa ITB -->
+                <div class="organizational-experience-item">
+                    <h4 class="text-xl font-semibold text-blue-700">Kabinet Keluarga Mahasiswa ITB</h4>
+                    <p class="text-sm text-gray-600">Apr 2021 - Mar 2022</p>
+                    <p class="font-medium mb-2">Public Relations of We-Come and B-Buddies</p>
+                    <p class="mb-2">Kabinet Keluarga Mahasiswa ITB is the association of ITB students.</p>
+                    <ul class="list-disc ml-6">
+                        <li>Responsible as promoter and contact person of the program.</li>
+                        <li>Reached student organizations in ITB to collaborate with We-Come and B-Buddies, a platform that provides information about competitions for students and facilitates them to find team members using the platform.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section-container bg-white">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Certifications</h3>
+            <p class="text-gray-700 text-justify">List your certifications here, including the issuing body and date.</p>
+        </div>
+    </section>
+
+    <section id="online-courses" class="section-container bg-blue-50">
+        <div class="project-section">
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Online Courses</h3>
+            <p class="text-gray-700 text-justify">List the online courses you've completed, including platforms and key topics covered.</p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all buttons with the 'scroll-button' class
+            const scrollButtons = document.querySelectorAll('.scroll-button');
+
+            scrollButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    // Prevent default anchor behavior
+                    event.preventDefault();
+
+                    // Get the target section ID from the data-target attribute
+                    const targetId = button.dataset.target;
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        // Scroll to the target section smoothly
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Slideshow functionality
+            let slideIndex = {
+                'icaps-slideshow': 1,
+                'safmc-slideshow': 1,
+                'krti-slideshow': 1,
+                'vibration-analysis-slideshow': 1
+            };
+
+            // Show initial slide for each slideshow
+            showSlides(1, 'icaps-slideshow');
+            showSlides(1, 'safmc-slideshow');
+            showSlides(1, 'krti-slideshow');
+            showSlides(1, 'vibration-analysis-slideshow');
+
+
+            // Next/previous controls
+            window.plusSlides = function(n, slideshowId) {
+                showSlides(slideIndex[slideshowId] += n, slideshowId);
+            }
+
+            // Thumbnail image controls (not used in this current design but kept for completeness)
+            window.currentSlide = function(n, slideshowId) {
+                showSlides(slideIndex[slideshowId] = n, slideshowId);
+            }
+
+            function showSlides(n, slideshowId) {
+                let i;
+                // Get all slides belonging to this slideshow
+                let slides = document.querySelectorAll(`#${slideshowId} .mySlides`);
+
+                if (slides.length === 0) return; // No slides found for this ID
+
+                if (!slideIndex[slideshowId]) {
+                    slideIndex[slideshowId] = 1; // Initialize if not set
+                }
+
+                if (n > slides.length) {
+                    slideIndex[slideshowId] = 1
+                }
+                if (n < 1) {
+                    slideIndex[slideshowId] = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex[slideshowId]-1].style.display = "block";
+            }
+        });
+    </script>
 </body>
 </html>
