@@ -81,7 +81,7 @@
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Slideshow specific styles */
+        /* Slideshow specific styles (kept for other sections) */
         .slideshow-container {
             position: relative;
             max-width: 600px;
@@ -212,7 +212,7 @@
             <button class="scroll-button bg-teal-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50" data-target="krti">KRTI</button>
             <button class="scroll-button bg-indigo-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50" data-target="vibration-analysis">Vibration Analysis (Internship at PT PLN Nusantara Power)</button>
             <button class="scroll-button bg-purple-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" data-target="soft-robot">Design Optimization of Soft Robot Bionic Hand Manipulator using Supervised Machine Learning</button>
-            <button class="scroll-button bg-pink-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-opacity-50" data-target="pedelec">Pedelec</button>
+            <button class="scroll-button bg-pink-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-opacity-50" data-target="food-cycler">Food Cycler</button>
             <button class="scroll-button bg-blue-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-opacity-50" data-target="bulletproof-car-door">Bulletproof Car Door Simulation (Finite Element Method)</button>
             <button class="scroll-button bg-cyan-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-cyan-900 focus:outline-none focus:ring-2 focus:ring-cyan-800 focus:ring-opacity-50" data-target="drunk-driver">Drunk Driver Detector</button>
             <button class="scroll-button bg-teal-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-teal-800 focus:ring-opacity-50" data-target="fraud-detection">Bank Transaction Fraud Detection</button>
@@ -234,20 +234,22 @@
                 <strong>Award: Bronze Prize</strong>
             </p>
 
-            <!-- Image Slideshow for i-CAPS -->
-            <div class="slideshow-container mb-6" id="icaps-slideshow">
-                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/42a5f5/ffffff?text=i-CAPS+Image+1" alt="i-CAPS Image 1">
-                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/1976d2/ffffff?text=i-CAPS+Image+2" alt="i-CAPS Image 2">
-                <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/0d47a1/ffffff?text=i-CAPS+Image+3" alt="i-CAPS Image 3">
-
-                <a class="prev" onclick="plusSlides(-1, 'icaps-slideshow')">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 'icaps-slideshow')">&#10095;</a>
+            <!-- YouTube Embedding for i-CAPS - Assembly Video -->
+            <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Assembly Video</h4>
+            <div class="embed-container mb-6">
+                <iframe src="https://www.youtube.com/embed/QcFt47WGa90" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <!-- YouTube Embedding for i-CAPS -->
-            <div class="embed-container">
-                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual YouTube video ID -->
-                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-in; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- YouTube Embedding for i-CAPS - Exploded View -->
+            <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Exploded View</h4>
+            <div class="embed-container mb-6">
+                <iframe src="https://www.youtube.com/embed/ldG1LEjCdpo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- YouTube Embedding for i-CAPS - Gameplay Demo -->
+            <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Gameplay Demo</h4>
+            <div class="embed-container mb-6">
+                <iframe src="https://www.youtube.com/embed/iKFCI0z7EkM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -338,10 +340,40 @@
         </div>
     </section>
 
-    <section id="pedelec" class="section-container bg-blue-50">
+    <section id="food-cycler" class="section-container bg-blue-50">
         <div class="project-section">
-            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Pedelec</h3>
-            <p class="text-gray-700 text-justify">Details about the Pedelec project will go here. Describe its purpose, your involvement, and any significant features.</p>
+            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Food Cycler</h3>
+            <p class="text-gray-700 mb-6 text-justify">
+                This project focuses on the design and development of a food cycler, a device aimed at reducing food waste by converting organic waste into compost or other useful byproducts. It involves conceptual design, detailed engineering, and potentially prototyping to create an efficient and user-friendly solution for waste management.
+            </p>
+            <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Conceptual Design Video</h4>
+            <div class="embed-container mb-6">
+                <iframe src="https://www.youtube.com/embed/XmPj39-3Sko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Assembly Process Video</h4>
+            <div class="embed-container mb-6">
+                <iframe src="https://www.youtube.com/embed/kKpwBrv6s_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Demo Video</h4>
+            <div class="embed-container mb-6">
+                <iframe src="https://www.youtube.com/embed/1Jz5f-Bycro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Final Design Presentation</h4>
+            <div class="flex justify-center mb-6">
+                <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+                padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                border-radius: 8px; will-change: transform;">
+                    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                        src="https://www.canva.com/design/DAF1smgy9uU/zB9SNFmP2LymYpc5hjN3Fg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                    </iframe>
+                </div>
+            </div>
+            <p class="text-gray-700 text-justify">
+                <a href="https://www.canva.com/design/DAF1smgy9uU/zB9SNFmP2LymYpc5hjN3Fg/view?utm_content=DAF1smgy9uU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">POSTER FOOD CYCLER</a>
+            </p>
         </div>
     </section>
 
@@ -385,7 +417,7 @@
 
             <!-- Gamma App Embedding for Drunk Driver Detector -->
             <div class="flex justify-center mb-6">
-                <iframe src="https://gamma.app/embed/86mtgonh1jzy2mo" style="width: 700px; max-width: 100%; height: 450px" allow="fullscreen" title="CekMabuk AI: Mencegah Kecelakaan Lalu Lintas"></iframe>
+                <iframe src="https://gamma.app/embed/86mtgonh1jzy2mo" style="width: 700px; max-width: 100%; height: 450px" allow="fullscreen" title="Copy of CekMabuk AI: Mencegah Kecelakaan Lalu Lintas"></iframe>
             </div>
         </div>
     </section>
@@ -407,7 +439,21 @@
     <section id="kinematic-analysis" class="section-container bg-white">
         <div class="project-section">
             <h3 class="text-3xl font-semibold mb-4 text-blue-800">Kinematic Analysis on Jumping Gait</h3>
-            <p class="text-gray-700 text-justify">Details about the Kinematic Analysis project will go here. Explain the analysis methods, findings, and any software used.</p>
+            <p class="text-gray-700 mb-6 text-justify">
+                This project involves a two-dimensional kinematic analysis of the effect of different shoes on jumping height. Using motion capture and analytical methods, the study investigates how footwear influences biomechanical parameters during a jump, aiming to understand and optimize jumping performance.
+            </p>
+            <div class="flex justify-center mb-6">
+                <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+                padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                border-radius: 8px; will-change: transform;">
+                    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                        src="https://www.canva.com/design/DAFV8_AkCLg/jJxihbOmCghIQv8c1BeQVQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                    </iframe>
+                </div>
+            </div>
+            <p class="text-gray-700 text-justify">
+                <a href="https://www.canva.com/design/DAFV8_AkCLg/jJxihbOmCghIQv8c1BeQVQ/view?utm_content=DAFV8_AkCLg&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">Analisis Kinematik Dua Dimensi Pengaruh Sepatu yang Digunakan terhadap Tinggi Loncatan</a>
+            </p>
         </div>
     </section>
 
@@ -505,16 +551,14 @@
                 });
             });
 
-            // Slideshow functionality
+            // Slideshow functionality (only for sections that still use it)
             let slideIndex = {
-                'icaps-slideshow': 1,
                 'safmc-slideshow': 1,
                 'krti-slideshow': 1,
                 'vibration-analysis-slideshow': 1
             };
 
             // Show initial slide for each slideshow
-            showSlides(1, 'icaps-slideshow');
             showSlides(1, 'safmc-slideshow');
             showSlides(1, 'krti-slideshow');
             showSlides(1, 'vibration-analysis-slideshow');
