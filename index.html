@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         /* Custom styles for scroll-snap like behavior */
@@ -176,37 +174,29 @@
 </head>
 <body>
 
-    <!-- Section 1: Hero Section -->
     <section id="hero" class="section-container">
         <div class="flex flex-col items-center">
-            <!-- Photo -->
             <img src="https://placehold.co/200x200/4a5568/ffffff?text=Your+Photo" alt="Your Photo" class="w-48 h-48 rounded-full object-cover shadow-lg mb-6 border-4 border-white">
 
-            <!-- Name -->
             <h1 class="text-5xl font-extrabold mb-3 leading-tight">Your Name</h1>
 
-            <!-- LinkedIn -->
             <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:text-blue-100 text-lg mb-4 underline">
                 LinkedIn Profile
             </a>
 
-            <!-- Tagline -->
             <p class="text-xl font-light max-w-2xl mb-8">
                 An ITB mechanical engineering fresh graduate who is passionate about machine learning.
             </p>
 
-            <!-- CV Button -->
             <button onclick="window.open('your-cv-link.pdf', '_blank')" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105">
                 Open CV
             </button>
         </div>
     </section>
 
-    <!-- Section 2: Projects and Experiences Navigation -->
     <section id="projects-nav" class="section-container bg-blue-50">
         <h2 class="text-4xl font-bold text-blue-800 mb-10 text-center">Projects & Experiences</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl px-4">
-            <!-- Navigation Buttons - Azure Palette -->
             <button class="scroll-button bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50" data-target="icaps">International Students Joint Capstone Design Project (i-CAPS) Competition 2024</button>
             <button class="scroll-button bg-cyan-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-opacity-50" data-target="safmc">SAFMC</button>
             <button class="scroll-button bg-teal-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50" data-target="krti">KRTI</button>
@@ -215,7 +205,6 @@
             <button class="scroll-button bg-pink-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-opacity-50" data-target="food-cycler">Food Cycler</button>
             <button class="scroll-button bg-blue-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-opacity-50" data-target="bulletproof-car-door">Bulletproof Car Door Simulation (Finite Element Method)</button>
             <button class="scroll-button bg-cyan-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-cyan-900 focus:outline-none focus:ring-2 focus:ring-cyan-800 focus:ring-opacity-50" data-target="drunk-driver">Drunk Driver Detector</button>
-            <button class="scroll-button bg-teal-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-teal-800 focus:ring-opacity-50" data-target="fraud-detection">Bank Transaction Fraud Detection</button>
             <button class="scroll-button bg-indigo-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-indigo-900 focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:ring-opacity-50" data-target="marker-angle">Marker-based Angle Measurement</button>
             <button class="scroll-button bg-purple-800 text-white py-3 px-6 rounded-lg shadow-md hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-opacity-50" data-target="kinematic-analysis">Kinematic Analysis on Jumping Gait</button>
             <button class="scroll-button bg-gray-700 text-white py-3 px-6 rounded-lg shadow-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-opacity-50" data-target="organizational-experiences">Organizational Experiences</button>
@@ -224,7 +213,6 @@
         </div>
     </section>
 
-    <!-- Project/Experience Sections -->
     <section id="icaps" class="section-container bg-white">
         <div class="project-section">
             <h3 class="text-3xl font-semibold mb-4 text-blue-800">International Students Joint Capstone Design Project (i-CAPS) Competition 2024</h3>
@@ -234,23 +222,34 @@
                 <strong>Award: Bronze Prize</strong>
             </p>
 
-            <!-- YouTube Embedding for i-CAPS - Assembly Video -->
             <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Assembly Video</h4>
             <div class="embed-container mb-6">
                 <iframe src="https://www.youtube.com/embed/QcFt47WGa90" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <!-- YouTube Embedding for i-CAPS - Exploded View -->
             <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Exploded View</h4>
             <div class="embed-container mb-6">
                 <iframe src="https://www.youtube.com/embed/ldG1LEjCdpo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <!-- YouTube Embedding for i-CAPS - Gameplay Demo -->
             <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Gameplay Demo</h4>
             <div class="embed-container mb-6">
                 <iframe src="https://www.youtube.com/embed/iKFCI0z7EkM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+
+            <h4 class="text-xl font-semibold mb-2 text-blue-700 mt-4">Group 11 Deck Presentation</h4>
+            <div class="flex justify-center mb-6">
+                <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+                padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                border-radius: 8px; will-change: transform;">
+                    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                        src="https://www.canva.com/design/DAGt9fffC3M/phR5DHGj-VphxBI-VZ_I5g/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                    </iframe>
+                </div>
+            </div>
+            <p class="text-gray-700 text-justify">
+                <a href="https://www.canva.com/design/DAGt9fffC3M/phR5DHGj-VphxBI-VZ_I5g/view?utm_content=DAGt9fffC3M&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">Copy of Group 11 Deck Presentation</a>
+            </p>
         </div>
     </section>
 
@@ -263,19 +262,16 @@
                 SAFMC is an international competition organized by DSO National Laboratories and Science Centre Singapore. Designed quadcopter Vertical Take Off and Landing (VTOL) drone that is able to deliver payload through obstacles autonomously. The drone has high indoor stability, light weight, compact design, and logistic holder mechanism, successfully competed with international rivals.
             </p>
 
-            <!-- Image Slideshow for SAFMC -->
             <div class="slideshow-container mb-6" id="safmc-slideshow">
                 <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/42a5f5/ffffff?text=SAFMC+Image+1" alt="SAFMC Image 1">
                 <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/1976d2/ffffff?text=SAFMC+Image+2" alt="SAFMC Image 2">
                 <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/0d47a1/ffffff?text=SAFMC+Image+3" alt="SAFMC Image 3">
 
-                <a class="prev" onclick="plusSlides(-1, 'safmc-slideshow')">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 'safmc-slideshow')">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1, 'safmc-slideshow')">❮</a>
+                <a class="next" onclick="plusSlides(1, 'safmc-slideshow')">❯</a>
             </div>
 
-            <!-- YouTube Embedding for SAFMC -->
             <div class="embed-container">
-                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual YouTube video ID -->
                 <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_SAFMC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
@@ -290,19 +286,16 @@
                 KRTI is a national competition organized by Pusat Prestasi Nasional (Puspresnas), Kemdikbudristek Indonesia. Designed VTOL drone that can deliver payload through obstacles and perform weather modification simulation (cloud seeding) autonomously. Besides being equipped with innovative dual payload dropping mechanisms, the drone also has better efficiency, higher speed capability, and wider flight altitude range compared to the competitors.
             </p>
 
-            <!-- Image Slideshow for KRTI -->
             <div class="slideshow-container mb-6" id="krti-slideshow">
                 <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/42a5f5/ffffff?text=KRTI+Image+1" alt="KRTI Image 1">
                 <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/1976d2/ffffff?text=KRTI+Image+2" alt="KRTI Image 2">
                 <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/0d47a1/ffffff?text=KRTI+Image+3" alt="KRTI Image 3">
 
-                <a class="prev" onclick="plusSlides(-1, 'krti-slideshow')">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 'krti-slideshow')">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1, 'krti-slideshow')">❮</a>
+                <a class="next" onclick="plusSlides(1, 'krti-slideshow')">❯</a>
             </div>
 
-            <!-- YouTube Embedding for KRTI -->
             <div class="embed-container">
-                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual YouTube video ID -->
                 <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_KRTI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
@@ -315,19 +308,16 @@
                 PT PLN Nusantara Power UP Indramayu is a company engaged in steam power generation. PLTU Indramayu has a production capacity of 3x330 MW distributed to the Java and Bali regions, especially West Java Province and DKI Jakarta. In carrying out its production process, PLTU Indramayu operates many systems including turbine, boiler, and balance of plant systems. These systems do not always run normally. In the turbine system, there is a machine that often experiences high vibration, namely the generator stator cooling water system pump. The author analyzed the cause of high vibration of the machine. The analysis was carried out based on vibration through the stages of field observation, literature study, data collection, data processing, problem diagnosis, and recommendation preparation. The results of this high vibration cause analysis are that high vibration is caused by looseness and misalignment due to mounting damage on the motor baseplate. Recommendations to overcome the high vibration are to replace the baseplate to prevent repeated misalignment due to mounting deformation, perform alignment, and install epoxy grout to prevent fatigue failure due to undamped vibration.
             </p>
 
-            <!-- Image Slideshow for Vibration Analysis -->
             <div class="slideshow-container mb-6" id="vibration-analysis-slideshow">
                 <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/42a5f5/ffffff?text=Vibration+Analysis+Image+1" alt="Vibration Analysis Image 1">
                 <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/1976d2/ffffff?text=Vibration+Analysis+Image+2" alt="Vibration Analysis Image 2">
                 <img class="mySlides w-full h-auto rounded-lg" src="https://placehold.co/600x400/0d47a1/ffffff?text=Vibration+Analysis+Image+3" alt="Vibration Analysis Image 3">
 
-                <a class="prev" onclick="plusSlides(-1, 'vibration-analysis-slideshow')">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 'vibration-analysis-slideshow')">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1, 'vibration-analysis-slideshow')">❮</a>
+                <a class="next" onclick="plusSlides(1, 'vibration-analysis-slideshow')">❯</a>
             </div>
 
-            <!-- YouTube Embedding for Vibration Analysis -->
             <div class="embed-container">
-                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual YouTube video ID -->
                 <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_VIBRATION" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
@@ -372,7 +362,7 @@
                 </div>
             </div>
             <p class="text-gray-700 text-justify">
-                <a href="https://www.canva.com/design/DAF1smgy9uU/zB9SNFmP2LymYpc5hjN3Fg/view?utm_content=DAF1smgy9uU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">POSTER FOOD CYCLER</a>
+                <a href="https://www.canva.com/design/DAF1smgy9uU/zB9SNFmP2LymYpc5hjN3Fg/view?utm_content=DAF1smgy9uU&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">POSTER FOOD CYCLER</a>
             </p>
         </div>
     </section>
@@ -384,7 +374,6 @@
                 This project involves the simulation of a bulletproof car door using the Finite Element Method (FEM). The goal is to analyze the structural integrity and deformation behavior of the car door when subjected to high-speed projectile impacts, ensuring optimal design for ballistic protection. The simulation provides insights into material response and energy absorption.
             </p>
 
-            <!-- Canva Embed for Bulletproof Car Door Simulation -->
             <div class="flex justify-center mb-6">
                 <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
                 padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
@@ -395,7 +384,7 @@
                 </div>
             </div>
             <p class="text-gray-700 text-justify">
-                <a href="https://www.canva.com/design/DAF3JUYuGQg/BBGXOETxA1Ygj8KmmlDyvQ/view?utm_content=DAF3JUYuGQg&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">Final Presentation MEH</a>
+                <a href="https://www.canva.com/design/DAF3JUYuGQg/BBGXOETxA1Ygj8KmmlDyvQ/view?utm_content=DAF3JUYuGQg&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">Final Presentation MEH</a>
             </p>
         </div>
     </section>
@@ -410,22 +399,13 @@
                 <a href="https://drunkorsober.streamlit.app/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">View Streamlit App</a>
             </p>
 
-            <!-- YouTube Embedding for Drunk Driver Detector -->
             <div class="embed-container mb-6">
                 <iframe src="https://www.youtube.com/embed/IKBmmAoW_As" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <!-- Gamma App Embedding for Drunk Driver Detector -->
             <div class="flex justify-center mb-6">
                 <iframe src="https://gamma.app/embed/86mtgonh1jzy2mo" style="width: 700px; max-width: 100%; height: 450px" allow="fullscreen" title="Copy of CekMabuk AI: Mencegah Kecelakaan Lalu Lintas"></iframe>
             </div>
-        </div>
-    </section>
-
-    <section id="fraud-detection" class="section-container bg-white">
-        <div class="project-section">
-            <h3 class="text-3xl font-semibold mb-4 text-blue-800">Bank Transaction Fraud Detection</h3>
-            <p class="text-gray-700 text-justify">Details about the Bank Transaction Fraud Detection project will go here. Explain the machine learning techniques used, the dataset, and the results.</p>
         </div>
     </section>
 
@@ -447,12 +427,12 @@
                 padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
                 border-radius: 8px; will-change: transform;">
                     <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                        src="https://www.canva.com/design/DAFV8_AkCLg/jJxihbOmCghIQv8c1BeQVQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                        src="https://www.canva.com/design/DAGuDm4egZw/4y7ffT221Ws0FeG8Wfp0wg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
                     </iframe>
                 </div>
             </div>
             <p class="text-gray-700 text-justify">
-                <a href="https://www.canva.com/design/DAFV8_AkCLg/jJxihbOmCghIQv8c1BeQVQ/view?utm_content=DAFV8_AkCLg&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">Analisis Kinematik Dua Dimensi Pengaruh Sepatu yang Digunakan terhadap Tinggi Loncatan</a>
+                <a href="https://www.canva.com/design/DAGuDm4egZw/4y7ffT221Ws0FeG8Wfp0wg/view?utm_content=DAGuDm4egZw&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">Copy of Analisis Kinematik Dua Dimensi Pengaruh Sepatu yang Digunakan terhadap Tinggi Loncatan</a>
             </p>
         </div>
     </section>
@@ -461,7 +441,6 @@
         <div class="project-section">
             <h3 class="text-3xl font-semibold mb-4 text-blue-800">Organizational Experiences</h3>
             <div class="text-gray-700">
-                <!-- Himpunan Mahasiswa Mesin (HMM) ITB -->
                 <div class="organizational-experience-item">
                     <h4 class="text-xl font-semibold text-blue-700">Himpunan Mahasiswa Mesin (HMM) ITB</h4>
                     <p class="text-sm text-gray-600">May 2023 – May 2024</p>
@@ -475,7 +454,6 @@
                     </ul>
                 </div>
 
-                <!-- ITB Student Orchestra (ISO) -->
                 <div class="organizational-experience-item">
                     <h4 class="text-xl font-semibold text-blue-700">ITB Student Orchestra (ISO)</h4>
                     <p class="text-sm text-gray-600">May 2022 - Apr 2023</p>
@@ -487,7 +465,6 @@
                     </ul>
                 </div>
 
-                <!-- Ganesha Academy: Pioneer (GAP) -->
                 <div class="organizational-experience-item">
                     <h4 class="text-xl font-semibold text-blue-700">Ganesha Academy: Pioneer (GAP)</h4>
                     <p class="text-sm text-gray-600">Nov 2021 - Mar 2022</p>
@@ -499,7 +476,6 @@
                     </ul>
                 </div>
 
-                <!-- Kabinet Keluarga Mahasiswa ITB -->
                 <div class="organizational-experience-item">
                     <h4 class="text-xl font-semibold text-blue-700">Kabinet Keluarga Mahasiswa ITB</h4>
                     <p class="text-sm text-gray-600">Apr 2021 - Mar 2022</p>
