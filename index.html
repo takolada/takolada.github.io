@@ -225,11 +225,18 @@ function filterByCategory(cat) {
 
 // Render projects
 function renderProjects(projects) {
+  console.log("Rendering projects:", projects.length); // 👈 add this
+  
   const buttons = document.getElementById('projects-buttons');
   const container = document.getElementById('projects-container');
 
   buttons.innerHTML = "";
   container.innerHTML = "";
+
+  projects.forEach(p => {
+    console.log("Rendering project:", p.title); // 👈 add this
+    // existing rendering code...
+  });
 
   projects.forEach(p => {
     buttons.insertAdjacentHTML('beforeend', `
@@ -563,6 +570,7 @@ loadProjects();
 </script>
 </body>
 </html>
+
 
 
 
