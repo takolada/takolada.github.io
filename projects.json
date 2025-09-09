@@ -117,6 +117,46 @@
     "id": "organizational-experiences",
     "title": "Organizational Experiences",
     "skills": "Leadership, Management, Teamwork, Communication",
-    "description": "Experience in leading divisions and teams in HMM ITB, ISO, GAP, and KM ITB with achievements in engineering training, fundraising, leadership mentoring, and student program management."
+    "description": "Experience in leading divisions and teams in HMM ITB, ISO, GAP, and KM ITB.",
+    "organizations": [
+      {
+        "org": "Himpunan Mahasiswa Mesin (HMM) ITB",
+        "role": "Head of Engineering Profession Division",
+        "duration": "May 2023 – May 2024",
+        "bullets": [
+          "Led a team of 7 staff members in successfully executing programs focused on enhancing core engineering skills.",
+          "Organized HSE, CAD, and FEA training sessions with 202 participants.",
+          "Achieved 1,191 likes across 5 technical content posts on Instagram.",
+          "Developed and maintained a comprehensive online learning resource platform."
+        ]
+      },
+      {
+        "org": "ITB Student Orchestra (ISO)",
+        "role": "Head of Fundraising Division",
+        "duration": "May 2022 – Apr 2023",
+        "bullets": [
+          "Led 3 staff in the design, production, and sale of apparel and merchandise.",
+          "Reduced production costs by up to Rp782,000, improving financial efficiency."
+        ]
+      },
+      {
+        "org": "Ganesha Academy: Pioneer (GAP)",
+        "role": "Head of Participant Human Resources Division",
+        "duration": "Nov 2021 – Mar 2022",
+        "bullets": [
+          "Managed and mentored 25 participants, overseeing progress and development.",
+          "Handled attendance, assignment assessment, performance evaluation, and reporting."
+        ]
+      },
+      {
+        "org": "Kabinet Keluarga Mahasiswa ITB",
+        "role": "Public Relations of We-Come and B-Buddies",
+        "duration": "Apr 2021 – Mar 2022",
+        "bullets": [
+          "Promoted and managed We-Come and B-Buddies programs.",
+          "Engaged with organizations across ITB to foster collaborations."
+        ]
+      }
+    ]
   }
 ]
