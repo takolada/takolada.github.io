@@ -161,7 +161,7 @@ let tooltipTargetSection = null;
 
 // Load projects
 async function loadProjects() {
-  const res = await fetch('projects.json');
+  const res = await fetch('./projects.json');
   allProjects = await res.json();
   renderCategoryFilters(allProjects);
   renderProjects(allProjects);
@@ -563,5 +563,6 @@ loadProjects();
 </script>
 </body>
 </html>
+
 
 
