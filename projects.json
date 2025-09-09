@@ -1,0 +1,122 @@
+[
+  {
+    "id": "icaps",
+    "title": "Bronze Prize Awardee in International Students Joint Capstone Design Project (i-CAPS) Competition 2024",
+    "skills": "Product Design, Machine Learning, Mechatronics, Python, Web Development, Manufacturing",
+    "description": "Delegates from various disciplines and nations were grouped to collaborate in designing a product themed 'Future Campus.' Our team’s product, 'Step with Me,' is an innovative arcade game station designed to promote a healthy lifestyle through recreational exercise and dietary recommendations.",
+    "embeds": [
+      "https://www.canva.com/design/DAGt9fffC3M/phR5DHGj-VphxBI-VZ_I5g/view?embed",
+      "https://www.youtube.com/embed/iKFCI0z7EkM",
+      "https://www.youtube.com/embed/ldG1LEjCdpo"
+    ],
+    "images": ["Assets/icaps1.jpg"]
+  },
+  {
+    "id": "safmc",
+    "title": "3rd Place in Singapore Amazing Flying Machine Competition (SAFMC) 2023",
+    "skills": "CAD, Rapid Prototyping, Flight Stability, Lightweight Structure, Topology Optimization",
+    "description": "As the Aerodynamics and Mechanical Design Engineer, I was responsible for designing a quadcopter VTOL drone capable of autonomously delivering payloads through obstacles.",
+    "embeds": ["https://www.youtube.com/embed/89qinqi1YY0"],
+    "images": ["Assets/safmc1.JPG", "Assets/safmc2.jpg", "Assets/safmc3.jpg"]
+  },
+  {
+    "id": "krti",
+    "title": "1st Place and Best Strategy of Vertical Take-off and Landing Category of Kontes Robot Terbang Indonesia (KRTI) 2023",
+    "skills": "CAD, Rapid Prototyping, Flight Stability",
+    "description": "I designed a VTOL drone capable of payload delivery and weather modification simulations (cloud seeding) autonomously, equipped with dual payload mechanisms for efficiency.",
+    "images": [
+      "Assets/krti1.jpg",
+      "Assets/krti2.JPG",
+      "Assets/krti3.JPG",
+      "Assets/krti4.JPG",
+      "Assets/krti5.jpg",
+      "Assets/krti6.jpg",
+      "Assets/krti7.jpg"
+    ]
+  },
+  {
+    "id": "vibration-analysis",
+    "title": "Vibration Analysis (Internship at PT PLN Nusantara Power)",
+    "skills": "Vibration Analysis, Troubleshooting, Root Cause Analysis, Technical Reporting",
+    "description": "During my internship, I analyzed recurring high vibration in the generator stator cooling water system pump. The root cause was looseness and misalignment due to a damaged baseplate. Recommendations included replacement, precise alignment, and epoxy grout installation."
+  },
+  {
+    "id": "soft-robot",
+    "title": "Design Optimization of Soft Robot Bionic Hand Manipulator using Supervised Machine Learning",
+    "skills": "Soft Robotics, Machine Learning, Design Optimization, CAD, Research",
+    "description": "We developed a soft robotic bionic hand combining soft and rigid materials. Using supervised machine learning (Decision Tree, Random Forest, SVM), we improved range of motion significantly compared to earlier designs.",
+    "embeds": [
+      "https://digilib.itb.ac.id/gdl/view_data/optimasi-parametrik-manipulator-tangan-bionik-soft-robot-menggunakan-supervised-machine-learning"
+    ]
+  },
+  {
+    "id": "food-cycler",
+    "title": "Food Cycler Project",
+    "skills": "Product Design, Sustainable Engineering, Prototyping, Mechanical Design",
+    "description": "Designed and prototyped a food cycler to reduce organic food waste by converting it into compost. Focused on sustainable design principles.",
+    "embeds": [
+      "https://www.youtube.com/embed/XmPj39-3Sko",
+      "https://www.youtube.com/embed/kKpwBrv6s_k",
+      "https://www.youtube.com/embed/1Jz5f-Bycro",
+      "https://www.canva.com/design/DAF1smgy9uU/zB9SNFmP2LymYpc5hjN3Fg/view?embed"
+    ],
+    "images": [
+      "Assets/fc1.png",
+      "Assets/fc2.png",
+      "Assets/fc3.png",
+      "Assets/fc4.png",
+      "Assets/fc5.png",
+      "Assets/fc6.png",
+      "Assets/fc7.png",
+      "Assets/fc8.png"
+    ]
+  },
+  {
+    "id": "bulletproof-car-door",
+    "title": "Bulletproof Car Door Simulation (Finite Element Method)",
+    "skills": "Finite Element Method (FEM), Structural Analysis, Ballistic Protection, Material Science, Simulation",
+    "description": "Simulated structural integrity of a bulletproof car door against high-speed projectile impacts to analyze deformation, material response, and optimize design.",
+    "embeds": ["https://www.canva.com/design/DAF3JUYuGQg/BBGXOETxA1Ygj8KmmlDyvQ/view?embed"]
+  },
+  {
+    "id": "coal-conveyor",
+    "title": "Coal Conveyor Installation (Construction Management Project)",
+    "skills": "Project Management, Cost Estimation",
+    "description": "Planned and managed the installation of a coal conveyor system, focusing on timeline, safety, and cost management.",
+    "embeds": ["https://www.canva.com/design/DAGuMEJpAcI/tLBikHz4WZzManA8kKzftg/view?embed"]
+  },
+  {
+    "id": "drunk-driver",
+    "title": "Drunk Driver Detector (Machine Learning)",
+    "skills": "Machine Learning, Computer Vision, Streamlit, Python, Accident Prevention",
+    "description": "Developed a machine learning-based drunk driver detector with a Streamlit demo app, applying computer vision to detect driver impairment.",
+    "embeds": [
+      "https://drunkorsober.streamlit.app/",
+      "https://www.youtube.com/embed/IKBmmAoW_As"
+    ],
+    "images": [
+      "Assets/dd1.png",
+      "Assets/dd2.png",
+      "Assets/dd3.png",
+      "Assets/dd4.png",
+      "Assets/dd5.png",
+      "Assets/dd6.png",
+      "Assets/dd7.png",
+      "Assets/dd8.png",
+      "Assets/dd9.png"
+    ]
+  },
+  {
+    "id": "kinematic-analysis",
+    "title": "Jumping Gait Kinematic Analysis (Biomechanics)",
+    "skills": "Kinematics, Biomechanics, Motion Capture, Data Analysis, Research",
+    "description": "Analyzed how shoe types affect jumping height using motion capture and biomechanical modeling.",
+    "embeds": ["https://www.canva.com/design/DAGuDm4egZw/4y7ffT221Ws0FeG8Wfp0wg/view?embed"]
+  },
+  {
+    "id": "organizational-experiences",
+    "title": "Organizational Experiences",
+    "skills": "Leadership, Management, Teamwork, Communication",
+    "description": "Experience in leading divisions and teams in HMM ITB, ISO, GAP, and KM ITB with achievements in engineering training, fundraising, leadership mentoring, and student program management."
+  }
+]
