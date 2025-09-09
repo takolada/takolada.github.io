@@ -263,6 +263,21 @@ function renderProjects(projects) {
         </button>
       `).join('');
 
+      // 🔹 Render external links as buttons
+      let linksHTML = "";
+      if (p.links && p.links.length > 0) {
+        linksHTML = `
+          <div class="flex flex-wrap gap-3 mb-4">
+            ${p.links.map(link => `
+              <a href="${link.url}" target="_blank"
+                 class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+                ${link.label}
+              </a>
+            `).join('')}
+          </div>
+        `;
+      }
+
       container.insertAdjacentHTML('beforeend', `
         <section id="${p.id}" class="section-container bg-white">
           <div class="project-section">
@@ -270,6 +285,7 @@ function renderProjects(projects) {
             <span class="skills-list font-semibold text-blue-700">Skills: ${p.skills}</span>
             <p class="text-gray-700 mb-6">${p.description}</p>
             <div class="flex flex-wrap mb-4">${categoryHTML}</div>
+            ${linksHTML}
             ${embedsHTML}
             ${imagesHTML}
           </div>
@@ -540,3 +556,4 @@ loadProjects();
 </script>
 </body>
 </html>
+
