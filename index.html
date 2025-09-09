@@ -347,6 +347,7 @@
       });
 
       projects.forEach(p => { if (p.images && p.images.length > 0) showSlides(1, `${p.id}-slideshow`); });
+      document.querySelectorAll('.section-container').forEach(s => observer.observe(s));
     }
 
     // Search filter
@@ -464,9 +465,13 @@
 
     // Fade-in effect
     const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          obs.unobserve(e.target);
+        }
+      });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.section-container').forEach(s => observer.observe(s));
 
     // Scroll progress + Back to Top
     const scrollProgress = document.getElementById('scroll-progress');
@@ -550,3 +555,4 @@
   </script>
 </body>
 </html>
+
