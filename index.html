@@ -7,33 +7,19 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --color-primary-light: #60a5fa;
-      --color-primary-dark: #2563eb;
-      --color-accent-light: #a78bfa;
-      --color-accent-dark: #7c3aed;
-      --color-text-dark: #1f2937;
-      --color-text-medium: #4b5563;
-      --color-bg-light: #f9fafb;
-      --color-bg-medium: #e5e7eb;
-      --color-bg-dark: #111827;
-    }
-
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, var(--color-bg-light), var(--color-bg-medium), var(--color-bg-light));
+      background: linear-gradient(135deg, #f9fafb, #e5e7eb, #f9fafb);
       background-size: 300% 300%;
       animation: movingBackground 15s ease infinite alternate;
       overflow-x: hidden;
       min-height: 100vh;
     }
-
     @keyframes movingBackground {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
     .section-container {
       min-height: 100vh;
       display: flex;
@@ -45,12 +31,10 @@
       transform: translateY(20px);
       transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
-
     .section-container.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     .project-section {
       background: white;
       border-radius: 1.5rem;
@@ -60,7 +44,6 @@
       width: 95%;
       margin-bottom: 2rem;
     }
-
     .slideshow-container {
       position: relative;
       margin: 1.5rem auto;
@@ -84,7 +67,6 @@
       user-select: none;
     }
     .next { right: 0; }
-
     .embed-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -122,74 +104,111 @@
     </div>
   </section>
 
-  <!-- Projects (Loaded from JSON) -->
-  <section id="projects" class="section-container bg-blue-50">
+  <!-- Project Navigation Buttons -->
+  <section id="projects-nav" class="section-container bg-blue-50">
     <h2 class="text-5xl font-extrabold text-blue-800 mb-12 text-center">Explore My Work & Experiences</h2>
-    <div id="projects-container"></div>
+    <div id="projects-buttons" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl px-4"></div>
   </section>
 
+  <!-- Projects Sections -->
+  <div id="projects-container"></div>
+
   <script>
-  // Load projects from JSON
   async function loadProjects() {
     const res = await fetch('projects.json');
     const projects = await res.json();
+    const buttons = document.getElementById('projects-buttons');
     const container = document.getElementById('projects-container');
-
+  
     projects.forEach(p => {
-      let embedsHTML = (p.embeds || []).map(url => `
-        <div class="embed-container">
-          <iframe src="${url}" frameborder="0" allowfullscreen></iframe>
-        </div>`).join('');
-
-      let imagesHTML = "";
-      if (p.images && p.images.length > 0) {
-        imagesHTML = `
-          <div class="slideshow-container" id="${p.id}-slideshow">
-            ${p.images.map(img => `<img class="mySlides" src="${img}">`).join("")}
-            <a class="prev" onclick="plusSlides(-1, '${p.id}-slideshow')">❮</a>
-            <a class="next" onclick="plusSlides(1, '${p.id}-slideshow')">❯</a>
-          </div>
-        `;
-      }
-
-      container.insertAdjacentHTML('beforeend', `
-        <section id="${p.id}" class="section-container bg-white">
-          <div class="project-section">
-            <h3 class="text-3xl font-bold mb-4 text-blue-800">${p.title}</h3>
-            <span class="skills-list font-semibold text-blue-700">Skills: ${p.skills}</span>
-            <p class="text-gray-700 mb-6">${p.description}</p>
-            ${embedsHTML}
-            ${imagesHTML}
-          </div>
-        </section>
+      // 🔹 Generate navigation button
+      buttons.insertAdjacentHTML('beforeend', `
+        <button class="scroll-button bg-blue-700 text-white py-4 px-6 rounded-xl shadow-md hover:bg-blue-800"
+                onclick="document.getElementById('${p.id}').scrollIntoView({behavior:'smooth'})">
+          ${p.title}
+        </button>
       `);
+  
+      // 🔹 Handle normal projects
+      if (!p.organizations) {
+        let embedsHTML = (p.embeds || []).map(url => `
+          <div class="embed-container">
+            <iframe src="${url}" frameborder="0" allowfullscreen></iframe>
+          </div>`).join('');
+  
+        let imagesHTML = "";
+        if (p.images && p.images.length > 0) {
+          imagesHTML = `
+            <div class="slideshow-container" id="${p.id}-slideshow">
+              ${p.images.map(img => `<img class="mySlides" src="${img}">`).join("")}
+              <a class="prev" onclick="plusSlides(-1, '${p.id}-slideshow')">❮</a>
+              <a class="next" onclick="plusSlides(1, '${p.id}-slideshow')">❯</a>
+            </div>
+          `;
+        }
+  
+        container.insertAdjacentHTML('beforeend', `
+          <section id="${p.id}" class="section-container bg-white">
+            <div class="project-section">
+              <h3 class="text-3xl font-bold mb-4 text-blue-800">${p.title}</h3>
+              <span class="skills-list font-semibold text-blue-700">Skills: ${p.skills}</span>
+              <p class="text-gray-700 mb-6">${p.description}</p>
+              ${embedsHTML}
+              ${imagesHTML}
+            </div>
+          </section>
+        `);
+      } 
+      // 🔹 Handle organizational experiences (nested)
+      else {
+        let orgsHTML = p.organizations.map(org => `
+          <div class="organizational-experience-item mb-8 pb-4 border-b border-gray-200">
+            <h4 class="text-2xl font-semibold text-blue-700">${org.org}</h4>
+            <p class="text-md text-gray-600 mb-1">${org.duration}</p>
+            <p class="font-bold mb-3 text-lg">${org.role}</p>
+            <ul class="list-disc ml-6 space-y-2 text-gray-700">
+              ${org.bullets.map(b => `<li>${b}</li>`).join('')}
+            </ul>
+          </div>
+        `).join('');
+  
+        container.insertAdjacentHTML('beforeend', `
+          <section id="${p.id}" class="section-container bg-blue-50">
+            <div class="project-section">
+              <h3 class="text-4xl font-bold mb-8 text-blue-800 text-center">${p.title}</h3>
+              ${orgsHTML}
+            </div>
+          </section>
+        `);
+      }
     });
-
-    // Initialize slideshows
+  
+    // 🔹 Initialize slideshows
     for (const p of projects) {
       if (p.images && p.images.length > 0) {
         showSlides(1, `${p.id}-slideshow`);
       }
     }
   }
-
+  
   // Slideshow logic
   let slideIndex = {};
   function showSlides(n, slideshowId) {
     let slides = document.querySelectorAll(`#${slideshowId} .mySlides`);
+    if (!slides.length) return;
+  
     if (!slideIndex[slideshowId]) slideIndex[slideshowId] = 1;
-
     if (n > slides.length) slideIndex[slideshowId] = 1;
     if (n < 1) slideIndex[slideshowId] = slides.length;
-
+  
     slides.forEach(s => s.style.display = "none");
     slides[slideIndex[slideshowId]-1].style.display = "block";
   }
   function plusSlides(n, slideshowId) {
     showSlides(slideIndex[slideshowId] += n, slideshowId);
   }
-
-  // Fade-in on scroll
+  
+  // Fade-in effect
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -198,9 +217,10 @@
       }
     });
   }, { threshold: 0.1 });
+  
   document.querySelectorAll('.section-container').forEach(s => observer.observe(s));
-
-  // Run
+  
+  // Run loader
   loadProjects();
   </script>
 </body>
