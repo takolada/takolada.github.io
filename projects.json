@@ -51,7 +51,8 @@
     "description": "We developed a soft robotic bionic hand combining soft and rigid materials. Using supervised machine learning (Decision Tree, Random Forest, SVM), we improved range of motion significantly compared to earlier designs.",
     "categories": ["Research", "Robotics", "Machine Learning"],
     "links": [
-      { "label": "Research Paper", "url": "https://digilib.itb.ac.id/gdl/view_data/optimasi-parametrik-manipulator-tangan-bionik-soft-robot-menggunakan-supervised-machine-learning" }
+      { "label": "Research Paper", "url": "https://digilib.itb.ac.id/gdl/view_data/optimasi-parametrik-manipulator-tangan-bionik-soft-robot-menggunakan-supervised-machine-learning" },
+      { "label": "Dextera AI", "url": "https://dextera.streamlit.app" }
     ]
   },
   {
