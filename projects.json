@@ -3,8 +3,8 @@
     "id": "icaps",
     "title": "Bronze Prize Awardee in International Students Joint Capstone Design Project (i-CAPS) Competition 2024",
     "skills": "Product Design, Machine Learning, Mechatronics, Python, Web Development, Manufacturing",
-    "description": "Delegates from various disciplines and nations were grouped to collaborate in designing a product themed 'Future Campus.' Our team’s product, 'Step with Me,' is an innovative arcade game station designed to promote a healthy lifestyle through recreational exercise and dietary recommendations.",
-    "categories": ["Competition", "Product Design", "Mechatronics"],
+    "description": "Delegates from various disciplines and nations were grouped to collaborate in designing a product themed 'Future Campus.' Our team’s product, 'Step with Me,' is an innovative arcade game station designed to promote a healthy lifestyle through recreational exercise and dietary recommendations. It uses computer vision to measure caloric expenditure and provides personalized lifestyle advice based on historical user data. My contributions included mechanical design (CAD), electrical systems (mechatronics), game development (programming), and prototyping (manufacturing).",
+    "categories": ["Competition", "Product Design", "Machine Learning", "Mechatronics"],
     "embeds": [
       "https://www.canva.com/design/DAGt9fffC3M/phR5DHGj-VphxBI-VZ_I5g/view?embed",
       "https://www.youtube.com/embed/iKFCI0z7EkM",
@@ -16,7 +16,7 @@
     "id": "safmc",
     "title": "3rd Place in Singapore Amazing Flying Machine Competition (SAFMC) 2023",
     "skills": "CAD, Rapid Prototyping, Flight Stability, Lightweight Structure, Topology Optimization",
-    "description": "As the Aerodynamics and Mechanical Design Engineer, I was responsible for designing a quadcopter VTOL drone capable of autonomously delivering payloads through obstacles.",
+    "description": "As the Aerodynamics and Mechanical Design Engineer, I was responsible for designing a quadcopter VTOL drone capable of autonomously delivering payloads through obstacles. Our drone featured high indoor stability, a lightweight and compact design, and an innovative logistic holder mechanism, successfully competing against international rivals.",
     "categories": ["Competition", "Robotics", "Aerospace"],
     "embeds": ["https://www.youtube.com/embed/89qinqi1YY0"],
     "images": ["Assets/safmc1.JPG", "Assets/safmc2.jpg", "Assets/safmc3.jpg"]
@@ -25,7 +25,7 @@
     "id": "krti",
     "title": "1st Place and Best Strategy of Vertical Take-off and Landing Category of Kontes Robot Terbang Indonesia (KRTI) 2023",
     "skills": "CAD, Rapid Prototyping, Flight Stability",
-    "description": "I designed a VTOL drone capable of payload delivery and weather modification simulations (cloud seeding) autonomously, equipped with dual payload mechanisms for efficiency.",
+    "description": "I designed a VTOL drone capable of payload delivery and weather modification simulation (cloud seeding) autonomously. Our drone was equipped with innovative dual payload dropping mechanisms, offering superior efficiency, higher speed capability, and a wider flight altitude range compared to competitors.",
     "categories": ["Competition", "Robotics", "Aerospace"],
     "images": [
       "Assets/krti1.jpg",
@@ -41,14 +41,14 @@
     "id": "vibration-analysis",
     "title": "Vibration Analysis (Internship at PT PLN Nusantara Power)",
     "skills": "Vibration Analysis, Troubleshooting, Root Cause Analysis, Technical Reporting",
-    "description": "During my internship, I analyzed recurring high vibration in the generator stator cooling water system pump. The root cause was looseness and misalignment due to a damaged baseplate. Recommendations included replacement, precise alignment, and epoxy grout installation.",
+    "description": "During my internship at PT PLN Nusantara Power UP Indramayu, a steam power generation company, I focused on analyzing a recurring issue of high vibration in the generator stator cooling water system pump. This critical machine impacts the power plant's production capacity (3x330 MW). My analysis involved field observation, literature review, data collection, data processing, problem diagnosis, and recommendation formulation. The investigation revealed that the high vibration was caused by looseness and misalignment due to damage on the motor baseplate. To mitigate this, I recommended replacing the baseplate, performing precise alignment, and installing epoxy grout to prevent fatigue failure from undamped vibrations. Note: Due to confidentiality, detailed documentation for this project is not available for public.",
     "categories": ["Internship", "Vibration Analysis", "Energy"]
   },
   {
     "id": "soft-robot",
     "title": "Design Optimization of Soft Robot Bionic Hand Manipulator using Supervised Machine Learning",
     "skills": "Soft Robotics, Machine Learning, Design Optimization, CAD, Research",
-    "description": "We developed a soft robotic bionic hand combining soft and rigid materials. Using supervised machine learning (Decision Tree, Random Forest, SVM), we improved range of motion significantly compared to earlier designs.",
+    "description": "Around 16% of the global population lives with disabilities, with hand amputation being a common cause. Bionic hands offer a solution, but traditional models made from rigid materials lack the flexibility of a human hand. To address this, the Biomechanics Research Team at ITB developed a soft robotic bionic hand using a combination of soft materials, a rigid structure, and strain limiters to mimic natural hand movement. Achieving a 90-degree range of motion is key to enhancing the hand's functionality. However, optimizing soft robot design is computationally intensive due to its complexity. To reduce this burden, machine learning was used to find optimal designs more efficiently. Algorithms such as linear regression, decision tree, random forest, k-nearest neighbors, and support vector machine (SVM) were tested using simulation-generated data. The decision tree model improved the index finger's range of motion by 16%, while the SVM model enhanced the thumb and little finger designs by 11% and 21%, respectively, compared to previous designs. As further improvement, I developed more robust model that has been deployed named Dextera AI, democratizing patient-specific soft robotic bionic hand for everyone.",
     "categories": ["Research", "Robotics", "Machine Learning"],
     "links": [
       { "label": "Research Paper", "url": "https://digilib.itb.ac.id/gdl/view_data/optimasi-parametrik-manipulator-tangan-bionik-soft-robot-menggunakan-supervised-machine-learning" },
@@ -59,7 +59,7 @@
     "id": "food-cycler",
     "title": "Food Cycler Project",
     "skills": "Product Design, Sustainable Engineering, Prototyping, Mechanical Design",
-    "description": "Designed and prototyped a food cycler to reduce organic food waste by converting it into compost. Focused on sustainable design principles.",
+    "description": "This project involved the conceptualization, detailed engineering, and prototyping of a food cycler, a device designed to significantly reduce organic food waste by converting it into usable compost. My role encompassed every stage, from initial design sketches to creating an efficient and user-friendly solution for household waste management. The project emphasized sustainable design principles and practical application.",
     "categories": ["Product Design", "Sustainability", "Prototyping"],
     "embeds": [
       "https://www.youtube.com/embed/XmPj39-3Sko",
@@ -82,7 +82,7 @@
     "id": "bulletproof-car-door",
     "title": "Bulletproof Car Door Simulation (Finite Element Method)",
     "skills": "Finite Element Method (FEM), Structural Analysis, Ballistic Protection, Material Science, Simulation",
-    "description": "Simulated structural integrity of a bulletproof car door against high-speed projectile impacts to analyze deformation, material response, and optimize design.",
+    "description": "This project involved the detailed simulation of a bulletproof car door using the Finite Element Method (FEM). The primary objective was to analyze the structural integrity and deformation behavior of the car door when subjected to high-speed projectile impacts. This simulation provided crucial insights into material response, energy absorption capabilities, and ultimately, helped optimize the design for enhanced ballistic protection.",
     "categories": ["Simulation", "FEM", "Defense"],
     "embeds": ["https://www.canva.com/design/DAF3JUYuGQg/BBGXOETxA1Ygj8KmmlDyvQ/view?embed"]
   },
@@ -90,7 +90,7 @@
     "id": "coal-conveyor",
     "title": "Coal Conveyor Installation (Construction Management Project)",
     "skills": "Project Management, Cost Estimation",
-    "description": "Planned and managed the installation of a coal conveyor system, focusing on timeline, safety, and cost management.",
+    "description": "This project involved the comprehensive planning and management for the installation of a coal conveyor system. My role included developing detailed project timelines, managing resources, identifying and mitigating potential risks, and ensuring the project adhered to safety standards and budget constraints. This experience significantly enhanced my understanding of large-scale industrial construction and project execution.   ",
     "categories": ["Construction", "Project Management"],
     "embeds": ["https://www.canva.com/design/DAGuMEJpAcI/tLBikHz4WZzManA8kKzftg/view?embed"]
   },
@@ -98,7 +98,7 @@
     "id": "drunk-driver",
     "title": "Drunk Driver Detector (Machine Learning)",
     "skills": "Machine Learning, Computer Vision, Streamlit, Python, Accident Prevention",
-    "description": "Developed a machine learning-based drunk driver detector with a Streamlit demo app, applying computer vision to detect driver impairment.",
+    "description": "This project focuses on developing a Drunk Driver Detector using Machine Learning, aiming to prevent traffic accidents by identifying impaired drivers. The solution includes a Streamlit web application for demonstration and utilizes computer vision techniques to analyze driver behavior. A key aspect is the implementation of robust machine learning models to accurately detect signs of intoxication.",
     "categories": ["Machine Learning", "Computer Vision", "AI"],
     "links": [
       { "label": "Live Demo", "url": "https://drunkorsober.streamlit.app/" }
@@ -120,7 +120,7 @@
     "id": "kinematic-analysis",
     "title": "Jumping Gait Kinematic Analysis (Biomechanics)",
     "skills": "Kinematics, Biomechanics, Motion Capture, Data Analysis, Research",
-    "description": "Analyzed how shoe types affect jumping height using motion capture and biomechanical modeling.",
+    "description": "This project focused on a two-dimensional kinematic analysis of how different shoe types affect jumping height. Utilizing motion capture technology and analytical methods, the study investigated how various footwear designs influence biomechanical parameters during a jump. The goal was to understand and ultimately optimize jumping performance by identifying the key kinematic factors influenced by shoe characteristics.",
     "categories": ["Research", "Biomechanics", "Kinematics"],
     "embeds": ["https://www.canva.com/design/DAGuDm4egZw/4y7ffT221Ws0FeG8Wfp0wg/view?embed"]
   },
@@ -132,14 +132,14 @@
     "categories": ["Leadership", "Organization"],
     "organizations": [
       {
-        "org": "Himpunan Mahasiswa Mesin (HMM) ITB",
+        "org": "Himpunan Mahasiswa Mesin (HMM) ITB / Mechanical Engineering Students Association of ITB",
         "role": "Head of Engineering Profession Division",
         "duration": "May 2023 – May 2024",
         "bullets": [
-          "Led a team of 7 staff members in successfully executing programs focused on enhancing core engineering skills.",
-          "Organized HSE, CAD, and FEA training sessions with 202 participants.",
-          "Achieved 1,191 likes across 5 technical content posts on Instagram.",
-          "Developed and maintained a comprehensive online learning resource platform."
+          "Led a team of 7 staff members in successfully executing programs focused on enhancing core engineering skills for students.",
+          "Organized and coordinated highly successful Health-Safety-Environment (HSE), Computer-Aided Design (CAD), and Finite Element Analysis (FEA) training sessions, attracting 202 participants.",
+          "Achieved significant engagement with 1,191 likes across 5 technical engineering content posts on HMM ITB's official Instagram account.",
+          "Developed and maintained a comprehensive online platform providing easily accessible learning resource information to students."
         ]
       },
       {
@@ -148,25 +148,25 @@
         "duration": "May 2022 – Apr 2023",
         "bullets": [
           "Led 3 staff in the design, production, and sale of apparel and merchandise.",
-          "Reduced production costs by up to Rp782,000, improving financial efficiency."
+          "Successfully reduced production costs by up to Rp782,000, significantly improving the division's financial efficiency."
         ]
       },
       {
-        "org": "Ganesha Academy: Pioneer (GAP)",
+        "org": "Ganesha Academy: Pioneer (GAP) - Freshman Leadership Development Program",
         "role": "Head of Participant Human Resources Division",
         "duration": "Nov 2021 – Mar 2022",
         "bullets": [
           "Managed and mentored 25 participants, overseeing progress and development.",
-          "Handled attendance, assignment assessment, performance evaluation, and reporting."
+          "Responsible for attendance tracking, comprehensive assignment assessment, detailed participant performance evaluation, and reporting."
         ]
       },
       {
-        "org": "Kabinet Keluarga Mahasiswa ITB",
+        "org": "Kabinet Keluarga Mahasiswa ITB / ITB Students Association",
         "role": "Public Relations of We-Come and B-Buddies",
         "duration": "Apr 2021 – Mar 2022",
         "bullets": [
-          "Promoted and managed We-Come and B-Buddies programs.",
-          "Engaged with organizations across ITB to foster collaborations."
+          "Acted as a key promoter and primary contact person for the We-Come and B-Buddies programs.",
+          "Successfully engaged with various student organizations across ITB to foster collaborations for We-Come and B-Buddies, a platform designed to provide students with competition information and facilitate team formation."
         ]
       }
     ]
