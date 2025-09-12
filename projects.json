@@ -50,7 +50,7 @@
     "skills": "Soft Robotics, Machine Learning, Design Optimization, CAD, Research",
     "description": "Around 16% of the global population lives with disabilities, with hand amputation being a common cause. Bionic hands offer a solution, but traditional models made from rigid materials lack the flexibility of a human hand. To address this, the Biomechanics Research Team at ITB developed a soft robotic bionic hand using a combination of soft materials, a rigid structure, and strain limiters to mimic natural hand movement. Achieving a 90-degree range of motion is key to enhancing the hand's functionality. However, optimizing soft robot design is computationally intensive due to its complexity. To reduce this burden, machine learning was used to find optimal designs more efficiently. Algorithms such as linear regression, decision tree, random forest, k-nearest neighbors, and support vector machine (SVM) were tested using simulation-generated data. The decision tree model improved the index finger's range of motion by 16%, while the SVM model enhanced the thumb and little finger designs by 11% and 21%, respectively, compared to previous designs. As further improvement, I developed more robust model that has been deployed named Dextera AI, democratizing patient-specific soft robotic bionic hand for everyone.",
     "categories": ["Research", "Robotics", "Machine Learning"],
-    "images": ["Assets/icaps1.jpg"],
+    "images": ["Assets/LOGO.png"],
     "links": [
       { "label": "Research Paper", "url": "https://digilib.itb.ac.id/gdl/view_data/optimasi-parametrik-manipulator-tangan-bionik-soft-robot-menggunakan-supervised-machine-learning" },
       { "label": "Dextera AI", "url": "https://dextera.streamlit.app" }
